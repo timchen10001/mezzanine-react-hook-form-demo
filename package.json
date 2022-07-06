@@ -17,9 +17,7 @@
     "@mezzanine-ui/system": "^0.7.0",
     "eventemitter3": "^4.0.7",
     "react-hook-form": "^7.33.1",
-    "rxjs": "^7.5.5",
-    "sass": "^1.53.0",
-    "sass-loader": "^13.0.2"
+    "rxjs": "^7.5.5"
   },
   "devDependencies": {
     "@babel/core": "^7.18.6",
@@ -45,6 +43,8 @@
     "lint-staged": "^12.3.5",
     "postcss": "^8.2.8",
     "prettier": "^2.5.1",
+    "sass": "^1.53.0",
+    "sass-loader": "^13.0.2",
     "stylelint": "^14.9.1",
     "stylelint-config-recommended-scss": "^6.0.0",
     "stylelint-config-standard": "^26.0.0",
