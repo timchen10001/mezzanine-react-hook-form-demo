@@ -1,0 +1,31 @@
+.root {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+}
+
+.input {
+  width: 100%;
+  min-height: 42px;
+  padding-inline-end: 25px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 11px;
+  right: 0;
+  cursor: pointer;
+  opacity: 0.3;
+  transition: opacity 0.2s ease-in;
+  transform: scale(2);
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.list {
+  width: 38px;
+}

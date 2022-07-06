@@ -1,0 +1,9 @@
+@use '~@mezzanine-ui/system/palette';
+
+.wrapper {
+  > label {
+    span {
+      color: palette.color(text-secondary);
+    }
+  }
+}
