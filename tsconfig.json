@@ -1,0 +1,26 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "target": "es5",
+    "baseUrl": "./",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "noUnusedLocals": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "skipLibCheck": true,
+    "strictPropertyInitialization": true,
+    "jsx": "react-jsx",
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules",
+        "options": { "customMatcher": "\\.s(a|c)ss$" }
+      }
+    ],
+    "lib": ["dom", "es5", "scripthost", "es2015.promise"],
+    "paths": {}
+  },
+  "exclude": ["**/*.spec.*"],
+  "include": ["src"]
+}

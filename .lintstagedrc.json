@@ -1,0 +1,6 @@
+{
+  "*.@(js|jsx|ts|tsx)": ["eslint --ext .ts,.tsx --fix"],
+  "*.@(css|sass|scss)": ["stylelint --fix"],
+  "*.@(html|mdx)": ["prettier --write", "eslint --ext .html,.mdx --fix"],
+  "*.@(json|md)": ["prettier --write"]
+}
