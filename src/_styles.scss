@@ -9,7 +9,7 @@
       @error 'Invalid options of #{$name}. Only accept false, null or map';
     }
 
-    $url: #{'../'}#{$namespace}#{'/'}#{$name};
+    $url: #{'~mezzanine-react-hook-form-demo/styles/'}#{$namespace}#{'/'}#{$name};
 
     @include meta.load-css($url, $options);
   }
