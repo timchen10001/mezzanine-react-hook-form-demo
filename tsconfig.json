@@ -1,6 +1,8 @@
 {
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "dist",
     "target": "es5",
     "baseUrl": "./",
     "module": "esnext",
@@ -19,8 +21,10 @@
       }
     ],
     "lib": ["dom", "es5", "scripthost", "es2015.promise"],
-    "paths": {}
+    "paths": {
+      "mezzanine-react-hook-form-demo": ["src"]
+    }
   },
-  "exclude": ["**/*.spec.*"],
-  "include": ["src"]
+  "include": ["**/*.ts"],
+  "exclude": ["dist", "**/*.spec.*", "example"]
 }
