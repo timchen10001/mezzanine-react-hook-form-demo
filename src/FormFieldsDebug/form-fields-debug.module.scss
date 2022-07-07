@@ -1,0 +1,48 @@
+.root {
+  background: #f6f8fa;
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  box-shadow: 1px 1px 8px rgb(0 0 0 / 20%);
+  height: fit-content;
+  overflow: hidden;
+  display: grid;
+  grid-auto-flow: row;
+  grid-auto-rows: max-content;
+  z-index: 999;
+  width: 400px;
+  max-width: 400px;
+
+  .title {
+    color: var(--mzn-color-primary);
+    background-color: var(--mzn-color-bg);
+    padding: 12px;
+    cursor: pointer;
+  }
+
+  .code {
+    background-color: var(--mzn-color-bg);
+    margin: unset;
+    padding: 12px 24px;
+    font-size: 0.875rem;
+    width: fit-content;
+    height: fit-content;
+    max-width: inherit;
+    overflow: auto;
+    max-height: 50vh;
+  }
+
+  .close {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    cursor: pointer;
+  }
+
+  opacity: 1;
+  transition: opacity 0.3s linear;
+
+  &Hovered {
+    opacity: 0.5;
+  }
+}
