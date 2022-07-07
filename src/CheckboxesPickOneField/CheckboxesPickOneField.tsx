@@ -6,12 +6,11 @@ import {
 import { useEffect } from 'react';
 import { FieldValues, useFormContext, useWatch } from 'react-hook-form';
 import { HookFormFieldComponent, HookFormFieldProps } from '../typings/field';
-
 import BaseField from '../BaseField/BaseField';
-import classes from './checkboxes-pick-one-field.module.scss';
 
 export type CheckboxesPickOneFieldProps = HookFormFieldProps<FieldValues, CheckboxProps, {
   options: CheckboxGroupOption[];
+  checkBoxedClassName?: string;
 }>;
 
 const CheckboxesPickOneField: HookFormFieldComponent<CheckboxesPickOneFieldProps> = ({
@@ -52,7 +51,7 @@ const CheckboxesPickOneField: HookFormFieldComponent<CheckboxesPickOneFieldProps
       fieldClassName={className}
       remark={remark}
     >
-      <div role="group" className={classes.checkboxes}>
+      <div role="group" className={undefined}>
         {options?.map((option) => (
           <Checkbox
             {...props}

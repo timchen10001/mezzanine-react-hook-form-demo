@@ -10,7 +10,7 @@ import {
   ReactNode,
 } from 'react';
 import { DeepRequired, FieldErrorsImpl, MultipleFieldErrors } from 'react-hook-form';
-import classes from './base-field.module.scss';
+import { baseFieldClasses } from '../styles/base-field';
 
 export interface BaseFieldProps {
   children: ReactNode;
@@ -52,7 +52,7 @@ const BaseField: FC<BaseFieldProps> = ({
 }) => (
   <FormField
     className={cx(
-      classes.form,
+      baseFieldClasses.form,
       className,
     )}
     style={{
@@ -66,10 +66,9 @@ const BaseField: FC<BaseFieldProps> = ({
     {(!!label || typeof label === 'string') && (
       <FormLabel
         className={cx(
-          classes.label,
+          baseFieldClasses.label,
+          label === '' && baseFieldClasses.labelWithMinWidth,
           labelClassName,
-          disabledErrMsg && classes.disabledErrMsg,
-          label === '' && classes['label--min-height'],
         )}
         htmlFor={name}
         remark={remark}
@@ -80,7 +79,7 @@ const BaseField: FC<BaseFieldProps> = ({
     )}
     <div
       className={cx(
-        classes.field,
+        baseFieldClasses.field,
         fieldClassName,
       )}
     >

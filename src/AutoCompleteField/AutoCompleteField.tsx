@@ -1,10 +1,12 @@
-import { AutoComplete, AutoCompleteProps, SelectValue } from '@mezzanine-ui/react';
+import {
+  AutoComplete, AutoCompleteProps, cx, SelectValue,
+} from '@mezzanine-ui/react';
 import { FormEventHandler } from 'react';
 import { FieldValues, useFormContext, useFormState } from 'react-hook-form';
 import { HookFormFieldComponent, HookFormFieldProps } from '../typings/field';
 import BaseField from '../BaseField/BaseField';
-import './auto-complete-field.scss';
 import { useAutoCompleteDebounce } from './use-auto-complete-debounce';
+import { autoCompleteClasses } from '../styles';
 
 export type AutoCompleteFieldProps = HookFormFieldProps<
 Omit<FieldValues, 'defaultValue' | 'onInput'>,
@@ -59,7 +61,10 @@ const AutoCompleteField: HookFormFieldComponent<AutoCompleteFieldProps> = ({
       errors={errors}
       required={required}
       width={width}
-      className={className}
+      className={cx(
+        autoCompleteClasses.wrapper,
+        className,
+      )}
     >
       <AutoComplete
         {...props}
