@@ -25,6 +25,6 @@
       "mezzanine-react-hook-form-demo": ["src"]
     }
   },
-  "include": ["**/*.ts"],
+  "include": ["./src"],
   "exclude": ["dist", "**/*.spec.*", "example"]
 }

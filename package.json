@@ -4,12 +4,15 @@
   "repository": "git@github.com:timchen10001/mezzanine-react-hook-form-demo.git",
   "author": "timchen <timchen10001@gmail.com>",
   "license": "MIT",
-  "main": "index.js",
-  "types": "index.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "keywords": [
     "react",
     "@mezzanine-ui",
     "react-hook-form"
+  ],
+  "files": [
+    "dist"
   ],
   "sideEffects": [
     "**/*.scss",
@@ -18,8 +21,8 @@
   "scripts": {
     "prepare": "npm run build",
     "clean": "npm run build:clean",
-    "build:clean": "node scripts/cleanBuild.js",
-    "build": "npm run build:clean && node scripts/build.js"
+    "build:clean": "node ./scripts/cleanBuild.js",
+    "build": "npm run build:clean && node ./scripts/build.js"
   },
   "peerDependencies": {
     "@hookform/error-message": "^2.0.0",
