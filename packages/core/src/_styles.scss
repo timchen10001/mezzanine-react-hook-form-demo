@@ -1,0 +1,33 @@
+@use 'sass:map';
+@use 'sass:meta';
+
+@mixin _load-styles($all-options, $namespace, $name: $namespace) {
+  $options: map.get($all-options, $name);
+
+  @if $options != false {
+    @if $options != null and meta.type-of($options) != 'map' {
+      @error 'Invalid options of #{$name}. Only accept false, null or map';
+    }
+
+    $url: #{'~@mezzanine-form/core/'}#{$namespace}#{'/'}#{$name}#{'-styles'};
+
+    @include meta.load-css($url, $options);
+  }
+}
+
+@mixin styles($options: ()) {
+  // Fields
+  @include _load-styles($options, base-field);
+  @include _load-styles($options, auto-complete);
+  @include _load-styles($options, checkbox-group);
+  @include _load-styles($options, input-field);
+  @include _load-styles($options, password-field);
+  @include _load-styles($options, radio-group-field);
+  @include _load-styles($options, range-slider-field);
+  @include _load-styles($options, select-field);
+  @include _load-styles($options, tab-input-field);
+  @include _load-styles($options, todo-list-field);
+
+  // Debug
+  @include _load-styles($options, form-fields-debug);
+}

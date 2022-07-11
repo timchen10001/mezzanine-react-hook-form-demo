@@ -4,7 +4,7 @@ const fse = require('fs-extra');
 const { PWD } = process.env;
 const packagePath = PWD;
 const packageDistPath = path.resolve(packagePath, 'dist');
-const repoPath = path.resolve(packagePath);
+const repoPath = path.resolve(packagePath, '..', '..');
 
 require('./cleanBuild');
 

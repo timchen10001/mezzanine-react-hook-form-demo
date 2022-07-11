@@ -1,0 +1,35 @@
+@use '~@mezzanine-ui/system/palette';
+@use '~@mezzanine-ui/system/transition';
+@use '~@mezzanine-ui/system';
+@use '~@mezzanine-ui/core';
+@use '~@mezzanine-form/core' as rhf-core;
+
+:root {
+  @include system.common-variables();
+  @include palette.variables('light');
+}
+
+.theme-dark {
+  @include palette.variables('dark');
+}
+
+.sb-show-main {
+  background-color: palette.color(bg);
+  color: palette.color(text-primary);
+  transition: transition.standard(background-color), transition.standard(color);
+  will-change: background-color, color;
+}
+
+.custom-table-header {
+  height: 100%;
+  background-color: palette.color(primary);
+  display: flex;
+  align-items: center;
+}
+
+.custom-table-body {
+  color: palette.color(primary);
+}
+
+@include core.styles();
+@include rhf-core.styles();

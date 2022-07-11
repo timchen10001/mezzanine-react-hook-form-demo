@@ -1,0 +1,7 @@
+@use './auto-complete' as *;
+
+.#{$prefix} {
+  :first-child[class^='mzn-text-field'] {
+    display: block;
+  }
+}

@@ -1,7 +1,0 @@
-$prefix: mzn-hf-auto-complete;
-
-.#{$prefix} {
-  :first-child[class^='mzn-text-field'] {
-    display: block;
-  }
-}

@@ -1,0 +1,5 @@
+@use './radio-group-field' as *;
+
+.#{$prefix}__label {
+  justify-content: flex-start;
+}

@@ -1,0 +1,7 @@
+@use './select-field' as *;
+
+.#{$prefix} {
+  &__fill {
+    width: 100%;
+  }
+}

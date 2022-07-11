@@ -1,0 +1,7 @@
+@use './tab-input-field' as *;
+
+.#{$prefix} {
+  &__tab {
+    min-width: 60px;
+  }
+}

@@ -1,0 +1,26 @@
+@use './range-slider-field' as *;
+
+.#{$prefix} {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 60px 1fr 60px;
+  align-items: center;
+  column-gap: 16px;
+
+  &__from,
+  &__to {
+    max-width: var(--inputWidth);
+    width: 60px;
+    height: 100%;
+  }
+
+  input[type='number'] {
+    appearance: textfield;
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      appearance: none;
+      margin: 0;
+    }
+  }
+}

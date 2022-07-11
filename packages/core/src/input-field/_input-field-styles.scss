@@ -1,0 +1,19 @@
+@use './input-field' as *;
+
+.#{$prefix} {
+  width: 100%;
+
+  &--width {
+    width: var(--width);
+  }
+
+  input[type='number'] {
+    appearance: textfield;
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      appearance: none;
+      margin: 0;
+    }
+  }
+}

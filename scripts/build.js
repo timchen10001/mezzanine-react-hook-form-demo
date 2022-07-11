@@ -3,16 +3,14 @@ const fse = require('fs-extra');
 const glob = require('glob');
 const { rollup } = require('rollup');
 const ts = require('rollup-plugin-typescript2');
-const scss = require('rollup-plugin-scss');
-
 
 const { PWD } = process.env;
 const packagePath = PWD;
 const packageJson = require(path.resolve(packagePath, 'package.json'));
-const tsconfigPath = path.resolve(packagePath, 'tsconfig.json');
+const tsconfigPath = path.resolve(packagePath, 'tsconfig.build.json');
 const packageSrcPath = path.resolve(packagePath, 'src');
 const packageDistPath = path.resolve(packagePath, 'dist');
-const repoPath = path.resolve(packagePath);
+const repoPath = path.resolve(packagePath, '..', '..');
 const nodeModulesPath = path.resolve(repoPath, 'node_modules');
 const tsPluginCachePath = path.resolve(nodeModulesPath, '.cache', 'rts2');
 
@@ -87,7 +85,6 @@ async function run() {
         cacheRoot: tsPluginCachePath,
         tsconfig: tsconfigPath,
       }),
-      scss({ output: false }),
     ],
     treeshake: {
       moduleSideEffects: false,

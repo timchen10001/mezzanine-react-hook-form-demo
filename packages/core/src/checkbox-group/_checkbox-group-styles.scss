@@ -1,0 +1,10 @@
+@use '~@mezzanine-ui/system/palette';
+@use './checkbox-group' as *;
+
+.#{$prefix} {
+  > label {
+    span {
+      color: palette.color(text-secondary);
+    }
+  }
+}

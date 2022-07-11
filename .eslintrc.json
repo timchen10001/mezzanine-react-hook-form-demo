@@ -1,6 +1,7 @@
 {
   "root": true,
   "parser": "@typescript-eslint/parser",
+  "ignorePatterns": ["scripts", "__test-utils__"],
   "parserOptions": {
     "ecmaVersion": 2020,
     "sourceType": "module",

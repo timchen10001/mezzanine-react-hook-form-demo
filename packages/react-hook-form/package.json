@@ -1,0 +1,69 @@
+{
+  "name": "@mezzanine-form/react-hook-form",
+  "version": "0.0.1",
+  "description": "Form with data binding HOC for mezzanine-ui",
+  "author": "timchen10001",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/timchen10001/mezzanine-react-hook-form-demo.git",
+    "directory": "packages/react-hook-form"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "module": "index.js",
+  "typings": "index.d.ts",
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "build": "node ../../scripts/build.js",
+    "build:clean": "node ../../scripts/cleanBuild.js",
+    "build-storybook": "build-storybook",
+    "storybook": "start-storybook -p 6005",
+    "deploy-storybook": "npx chromatic --project-token=d5054e556e66"
+  },
+  "peerDependencies": {
+    "lodash": "^4.17.21",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "dependencies": {
+    "@hookform/error-message": "^2.0.0",
+    "@mezzanine-ui/core": "^0.10.5",
+    "@mezzanine-ui/icons": "^0.10.2",
+    "@mezzanine-ui/react": "^0.10.0",
+    "@mezzanine-ui/system": "^0.7.0",
+    "eventemitter3": "^4.0.7",
+    "@popperjs/core": "^2.11.5",
+    "@types/react-transition-group": "^4.4.5",
+    "clsx": "^1.1.1",
+    "lodash": "^4.17.21",
+    "react-popper": "^2.3.0",
+    "react-transition-group": "^4.4.2",
+    "tslib": "^2.1.0",
+    "react": "^18.2.0",
+    "react-hook-form": "^7.27.0",
+    "rxjs": "^7.5.5"
+  },
+  "devDependencies": {
+    "@hookform/resolvers": "^2.8.4",
+    "@storybook/react": "^6.5.9",
+    "@testing-library/react": "^13.2.0",
+    "@testing-library/react-hooks": "^8.0.0",
+    "@types/lodash": "^4.14.182",
+    "@types/moment": "^2.13.0",
+    "@types/react": "^18.0.14",
+    "@types/react-dom": "^18.0.5",
+    "@types/react-test-renderer": "^18.0.0",
+    "chromatic": "^6.6.4",
+    "dayjs": "^1.11.3",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-test-renderer": "^18.2.0"
+  }
+}

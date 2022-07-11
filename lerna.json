@@ -1,0 +1,24 @@
+{
+  "npmClient": "yarn",
+  "npmClientArgs": ["--no-lockfile"],
+  "useWorkspaces": true,
+  "version": "independent",
+  "command": {
+    "version": {
+      "allowBranch": "main",
+      "conventionalCommits": true,
+      "ignoreChanges": [
+        "**/__test-utils__",
+        "**/*.spec.*",
+        "**/*.stories.*",
+        "**/*.md",
+        "**/*.mdx"
+      ],
+      "message": "chore: release",
+      "yes": true
+    },
+    "publish": {
+      "contents": "dist"
+    }
+  }
+}

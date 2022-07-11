@@ -1,30 +1,11 @@
 {
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    "rootDir": "src",
-    "outDir": "dist",
-    "target": "es5",
-    "baseUrl": "./",
-    "module": "esnext",
-    "moduleResolution": "node",
-    "sourceMap": true,
-    "noUnusedLocals": true,
-    "strict": true,
-    "strictNullChecks": true,
-    "skipLibCheck": true,
-    "strictPropertyInitialization": true,
-    "jsx": "react-jsx",
-    "plugins": [
-      {
-        "name": "typescript-plugin-css-modules",
-        "options": { "customMatcher": "\\.s(a|c)ss$" }
-      }
-    ],
-    "lib": ["dom", "es5", "scripthost", "es2015.promise"],
+    "rootDir": ".",
+    "baseUrl": "./packages",
     "paths": {
-      "mezzanine-react-hook-form-demo": ["src"]
+      "@mezzanine-form/core/*": ["core/src/*"],
+      "@mezzanine-form/react-hook-form/*": ["react-hook-form/src/*"]
     }
-  },
-  "include": ["./src"],
-  "exclude": ["dist", "**/*.spec.*", "example"]
+  }
 }
