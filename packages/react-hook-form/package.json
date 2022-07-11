@@ -1,6 +1,6 @@
 {
   "name": "@mezzanine-form/react-hook-form",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Form with data binding HOC for mezzanine-ui",
   "author": "timchen10001",
   "repository": {
@@ -36,17 +36,17 @@
     "@mezzanine-ui/icons": "^0.10.2",
     "@mezzanine-ui/react": "^0.10.0",
     "@mezzanine-ui/system": "^0.7.0",
-    "eventemitter3": "^4.0.7",
     "@popperjs/core": "^2.11.5",
     "@types/react-transition-group": "^4.4.5",
     "clsx": "^1.1.1",
+    "eventemitter3": "^4.0.7",
     "lodash": "^4.17.21",
-    "react-popper": "^2.3.0",
-    "react-transition-group": "^4.4.2",
-    "tslib": "^2.1.0",
     "react": "^18.2.0",
     "react-hook-form": "^7.27.0",
-    "rxjs": "^7.5.5"
+    "react-popper": "^2.3.0",
+    "react-transition-group": "^4.4.2",
+    "rxjs": "^7.5.5",
+    "tslib": "^2.1.0"
   },
   "devDependencies": {
     "@hookform/resolvers": "^2.8.4",
